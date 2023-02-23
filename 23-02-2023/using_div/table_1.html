@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Div Table 1</title>
+</head>
+
+<!--.hcell = heading element & dcell = data elemenet-->
+<style>
+    .row {
+        display: flex;
+        width: 100%;
+    }
+
+    .hcell,
+    .dcell {
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+        padding: 8px;
+        width: 25%;
+    }
+
+    .hcell {
+        background-color: gainsboro;
+    }
+
+    .table {
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+    <p style="padding: 0px;">
+        <center>
+            <strong>
+                Invoice
+            </strong>
+        </center>
+    </p>
+
+    <!--Table Div-->
+    <div class="table">
+
+        <!--Row 1 Div-->
+        <div class="row">
+            <div class="hcell">
+                <strong>
+                    Item/ Description
+                </strong>
+            </div>
+            <div class="hcell">
+                <strong>
+                    Qty.
+                </strong>
+            </div>
+            <div class="hcell">
+                <strong>
+                    @
+                </strong>
+            </div>
+            <div class="hcell">
+                <strong>
+                    Price
+                </strong>
+            </div>
+        </div>
+
+        <!--Row 2 Div-->
+        <div class="row">
+            <div class="dcell">
+                Paperclips (Box)
+            </div>
+            <div class="dcell">
+                100
+            </div>
+            <div class="dcell">
+                1.15
+            </div>
+            <div class="dcell">
+                115.00
+            </div>
+        </div>
+
+        <!--Row 3 Div-->
+        <div class="row">
+            <div class="dcell">
+                Paper (Case)
+            </div>
+            <div class="dcell">
+                10
+            </div>
+            <div class="dcell">
+                45.99
+            </div>
+            <div class="dcell">
+                459.90
+            </div>
+        </div>
+
+        <!--Row 4 Div-->
+        <div class="row">
+            <div class="dcell">
+                Wastepaper
+                <br> Basket
+            </div>
+            <div class="dcell">
+                2
+            </div>
+            <div class="dcell">
+                17.99
+            </div>
+            <div class="dcell">
+                35.98
+            </div>
+        </div>
+
+        <!--Row 5 Div-->
+        <div class="row">
+            <div class="hcell" style="width: 75%;">
+                Sub Total
+            </div>
+            <div class="dcell">
+                610.88
+            </div>
+        </div>
+
+        <!--Row 6 Div-->
+        <div class="row" style="display: flex;">
+            <div class="hcell" style="width: 50%;">
+                Tax
+            </div>
+            <div class="dcell">
+                7%
+            </div>
+            <div class="dcell">
+                42.76
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

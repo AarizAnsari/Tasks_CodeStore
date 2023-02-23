@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html tabele</title>
+</head>
+<style>
+    .row{
+        display: flex;
+        width: 100%;
+    }
+    .hcell,.dcell{
+        width: 25%;
+        border: 1px solid black;
+        padding: 8px;
+    }
+    .hcell{
+        background-color: grey;
+    }
+</style>
+<body>
+    <!--Table body-->
+    <div class="table">
+        <!--table row 1-->
+        <div class="row">
+            <div class="hcell">
+
+            </div>
+            
+            <div class="hcell">
+
+            </div>
+
+            <div class="dcell">
+                Bob
+            </div>
+            <div class="dcell">
+                Alice
+            </div>
+        </div>
+
+        <!--Table row 2-->
+        <div class="row">
+            <div class="hcell">
+                Favorite
+            </div>
+            <!--Row 2 Col 2 is patitioned into two cells-->
+            <div style="width: 25%; border: 1px solid black;">
+                <div class="dcell" style="width: 100%;">
+                    Color
+                </div>
+                <div class="dcell" style="width: 100%;">
+                    Flavor
+                </div>
+            </div>
+
+            <!--Row 2 Col 3 is patitioned into two cells-->
+            <div style="width: 25%; border: 1px solid black;">
+                <div class="dcell" style="width: 100%;">
+                    Blue
+                </div>
+                <div class="dcell" style="width: 100%;">
+                    Banana
+                </div>
+            </div>
+
+            <!--Row 2 Col 4 is patitioned into two cells-->
+            <div style="width: 25%; border: 1px solid black;">
+                <div class="dcell" style="width: 100%;">
+                    Purple
+                </div>
+                <div class="dcell" style="width: 100%;">
+                    Chocolate
+                </div>
+            </div>
+
+        </div>
+
+        <!--Row 3-->
+        <div class="row">
+            <div class="hcell">
+                Least 
+                <br> Favorite
+            </div>
+
+            <!--Row 3 Col 2 is patitioned into two cells-->
+            <div style="width: 25%; border: 1px solid black;">
+                <div class="dcell" style="width: 100%;">
+                    Color
+                </div>
+                <div class="dcell" style="width: 100%;">
+                    Flavor
+                </div>
+            </div>
+
+            <!--Row 3 Col 3 is patitioned into two cells-->
+            <div style="width: 25%; border: 1px solid black;">
+                <div class="dcell" style="width: 100%;">
+                    Yellow
+                </div>
+                <div class="dcell" style="width: 100%;">
+                    Mint
+                </div>
+            </div>
+
+            <!--Row 3 Col 4 is patitioned into two cells-->
+            <div style="width: 25%; border: 1px solid black;">
+                <div class="dcell" style="width: 100%;">
+                    Pink
+                </div>
+                <div class="dcell" style="width: 100%;">
+                    Walnut
+                </div>
+            </div> 
+    </div>
+</body>
+</html>
