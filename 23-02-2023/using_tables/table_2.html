@@ -1,0 +1,96 @@
+<!--This page is unresponsive for different screen sizes-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table</title>
+</head>
+<style>
+   th,td{
+        border: 1px solid gray;
+        padding-left: 5px;
+        text-align: justify;
+        width: 20px; 
+    }
+    th{
+        background-color: rgb(235, 235, 235);
+    }
+</style>
+<body>
+    <table style="border-collapse: collapse; border-right: 2px solid black;">
+
+        <caption>
+            Favorite and Least Favorite Things
+        </caption>
+
+        <!--Table Row 1-->
+        <tr style="border-bottom: 2px solid black; ">
+            <th style="width: 150px;"></th>
+            <th style="width: 150px;"></th>
+            <th style="width: 150px;">Bob</th>
+            <th style="width: 150px;">Alice</th>
+        </tr>
+
+        <!--Table Row 2-->
+        <tr>
+            <th rowspan="2">
+                Favorite
+            </th>
+            <th>
+                Color
+            </th>
+            <td>
+                Blue
+            </td>
+            <td>
+                Purple
+            </td>
+        </tr>
+
+        <!--Table Row 3-->
+        <tr>
+            <th>
+                Flavor
+            </th>
+            <td>
+                Banana
+            </td>
+            <td>
+                Chocolate
+            </td>
+        </tr>
+
+        <!--Table Row 4-->
+        <tr>
+            <th rowspan="2">
+               Least 
+               <br>Favorite
+            </th>
+            <th>
+                Color
+            </th>
+            <td>
+                Yellow
+            </td>
+            <td>
+                Pink
+            </td>
+        </tr>
+
+        <!--Table Row 5-->
+        <tr>
+            <th>
+                Flavor
+            </th>
+            <td>
+                Mint
+            </td>
+            <td>
+                Walnut
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,145 @@
+
+
+<!--This page is responsive for different screen sizes-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table</title>
+</head>
+<!--Css style block-->
+<style>
+    td,th{
+        border: 1px solid black;
+        padding: 8px;
+    }
+    th{
+        background-color: rgb(218, 218, 218);
+        text-align: left;
+    }
+</style>
+<body>
+    <table style="border-collapse: collapse; width: 100%;">
+        <!--Table row 1-->
+        <tr>
+            <th colspan="3">
+                Invoice#123456789
+            </th>
+            <th>
+                14 January 2023
+            </th>
+        </tr>
+
+        <!--Table row 2-->
+        <tr>
+            <td colspan="2">
+                
+                    <strong>
+                        Pay to:
+                    </strong>
+                    Acme Billing Co.
+                    <br>
+                    123 Main St.
+                    <br>
+                    Cityville, NA 12345
+                
+            </td>
+            <td colspan="2" style="width: 50%;">
+                    <strong>
+                        Customer:
+                    </strong>
+                    John Smith
+                    <br>
+                    321 Willow Way
+                    <br>
+                    Southeast Northwester, MA 54321
+            </td>
+        </tr>
+        
+        <!--Table row 3-->
+        <tr>
+            <th style="width: 25%;">
+                Name/Description
+            </th>
+            <th style="width: 25%;">
+                Qty.
+            </th>
+            <th style="width: 25%;">
+                @
+            </th>
+            <th style="width: 25%;">
+                Cost
+            </th>
+        </tr>
+        
+        <!--Table row 4-->
+        <tr>
+            <td>
+                Paperclips
+            </td>
+            <td>
+                1000
+            </td>
+            <td>
+                0.01
+            </td>
+            <td>
+                10.00
+            </td>
+        </tr>
+
+        <!--Table row 5-->
+        <tr>
+            <td>
+                Staples(Box)
+            </td>
+            <td>
+                100
+            </td>
+            <td>
+                1.00
+            </td>
+            <td>
+                100.00
+            </td>
+        </tr>
+
+        <!--Table row 6-->
+        <tr>
+            <th colspan="3">
+                Subtotal
+            </th>
+            <td>
+                110.00
+            </td>
+        </tr>
+
+        <!--Table row 7-->
+        <tr>
+            <th colspan="2">
+                Tax
+            </th>
+            <td>
+                8%
+            </td>
+            <td>
+                8.80
+            </td>
+        </tr>
+
+        
+        <!--Table row 8-->
+        <tr>
+            <th colspan="3">
+                Grand Total
+            </th>
+            <td>
+                $ 118.80
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
