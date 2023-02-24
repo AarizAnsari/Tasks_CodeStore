@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+</head>
+
+<style>
+    .wrapper {
+        margin: 10px;
+    }
+</style>
+
+<body>
+    <!--Start of form-->
+    <form>
+
+        <!--fieldset wraps the content in a border-->
+        <fieldset>
+
+            <!--legend appears as a heading on the fieldset-->
+            <legend>Tourism</legend>
+
+            <div class="wrapper">
+                <!--label provides a title to the input field-->
+                <label for="fname">Tourist Name:</label>
+                <input type="text" id="name">
+            </div>
+
+            <div class="wrapper">
+                <label for="dest">Destinations</label>
+
+                <!--Select provide a dropdown list of data-->
+                <select name="cars" id="dest">
+
+                    <!--Optgroup acts as a subheading for a long list of data-->
+                    <optgroup label="Hills">
+                        <option value="0">Manali</option>
+                        <option value="1">Kashmir</option>
+                    </optgroup>
+
+                    <optgroup label="Beaches">
+                        <option value="2">Goa</option>
+                        <option value="3">Juhu</option>
+                    </optgroup>
+
+                </select>
+            </div>
+
+            <div class="wrapper">
+                <input type="submit">
+            </div>
+            
+        </fieldset>
+    </form>
+</body>
+
+</html>

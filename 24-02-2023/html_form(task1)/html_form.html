@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="html_form.css">
+    <script src="html_form.js" type="text/javascript"></script>
+    <title>HTML Form</title>
+</head>
+
+<body>
+    <h1>
+        Please Enter Your Data
+    </h1>
+
+    <!--Html form starting-->
+    <form>
+
+        <div class="wrapper">
+            <!--First name form field-->
+            <label for="fname">First Name</label>
+            <div>
+                <input type="text" id="fname">
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <!--Last name form field-->
+            <label for="lname">Last Name</label>
+            <div>
+                <input type="text" id="lname">
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <!--Age form field-->
+            <label for="age">Age</label>
+            <div>
+                <input type="number" id="age">
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <label for="gender">Gender:</label>
+            <!--Gender radio buttons-->
+            <div>
+                <input type="radio" name="gender" id="male">Male
+                <input type="radio" name="gender" id="female">Female
+                <input type="radio" name="gender" id="others">Others
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <!--Form submit button-->
+            <input type="submit" onclick="display(); return false">
+        </div>
+    </form>
+    </div>
+
+    <!--Data display field to show input form data using JS-->
+    <p>
+        <span id="data">
+
+        </span>
+    </p>
+</body>
+
+</html>
