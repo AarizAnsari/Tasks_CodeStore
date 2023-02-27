@@ -3,7 +3,7 @@ function display() { /*JS function to get and display form data*/
     var secondname = document.getElementById("lname").value;
     var _age = document.getElementById("age").value;
 
-    // condition to get gender value from radio buttons
+    // condition to get gender value from radio buttons//
     var gend = "Others";
     if(document.getElementById("male").checked){
         gend = "Male"
