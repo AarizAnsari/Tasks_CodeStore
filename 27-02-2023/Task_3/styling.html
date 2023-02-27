@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Link tag to link external css file-->
+    <link rel="stylesheet" href="styling.css">
+    <title>Ways for adding CSS</title>
+</head>
+
+<!--Using Internal CSS in HTML Document-->
+<style>
+    h1 {
+        text-align: left;
+        color: white;
+        padding: 20px;
+    }
+</style>
+
+<!--Using Inline CSS in body tag-->
+
+<body style="background-color: black;">
+    <header>
+        <!--Internal Styling using element name-->
+        <h1>Tere are three ways to add styling to elements:</h1>
+    </header>
+    <main>
+        <!--External Styling using the class name-->
+        <div class="heading">
+            <h2>Inline Styling</h2>
+            <p>
+                In inline styling the style attribute is used inside the html tag of element.
+            </p>
+        </div>
+        <div class="spacer">
+
+        </div>
+        <div class="heading">
+            <h2>Internal Styling</h2>
+            <p>
+                In Internal styling the style tag is used in html Page.
+            </p>
+        </div>
+        <div class="spacer">
+
+        </div>
+        <div class="heading">
+            <h2>External Styling</h2>
+            <p>
+                In External styling the stylesheet is created as a seperate document and linked to the html document
+                using the link tag.
+            </p>
+        </div>
+    </main>
+</body>
+
+</html>

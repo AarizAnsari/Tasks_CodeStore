@@ -1,0 +1,24 @@
+/*Element Selector
+tag name is used to add style*/
+body{
+    background-color: black;
+  }
+
+/*ID Selector
+ID name is used to add style*/
+#heading{
+    color: aliceblue;
+}
+
+/*Class Selector
+class name is used to add style*/
+.content{
+    color: aliceblue;
+}
+
+/*Universal Selector
+* is used to add style to every element*/
+* {
+    text-align: center;
+    padding: 8px;
+  }

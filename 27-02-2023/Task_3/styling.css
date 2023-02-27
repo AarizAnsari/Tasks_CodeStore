@@ -1,0 +1,11 @@
+/*Using External CSS*/
+.heading{
+    color: white;
+    border: 2px solid white;
+    padding: 20px;
+    margin: 20px;
+    text-align: left;
+}
+.spacer{
+    height: 40px;
+}
