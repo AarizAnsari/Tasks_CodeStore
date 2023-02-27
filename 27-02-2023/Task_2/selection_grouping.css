@@ -1,14 +1,16 @@
+
+
 /*Example of Selector Grouping*/
 h1,h2,p{
-    text-align: left;
-    margin: 8px;
-    padding: 10px;
+        text-align: left;
+        margin: 8px;
+        padding: 10px;
 }
 
 #norm_head,#norm_data{
     text-align: left;
-    margin: 8px;
-    padding: 10px;
+        margin: 8px;
+        padding: 10px;
 }
 /*It is not only limited to element selector and it also can 
 be applied to ID or Class in the same way.

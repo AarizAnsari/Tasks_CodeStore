@@ -1,24 +1,30 @@
+
+$sc:aliceblue; //Secondary Color
+
+$pc:black; //Primary Color
+
+
 /*Element Selector
 tag name is used to add style*/
-body {
-  background-color: black;
-}
+body{
+    background-color: black;
+  }
 
 /*ID Selector
 ID name is used to add style*/
-#heading {
-  color: aliceblue;
+#heading{
+    color: $sc;
 }
 
 /*Class Selector
 class name is used to add style*/
-.content {
-  color: aliceblue;
+.content{
+    color: $sc;
 }
 
 /*Universal Selector
 * is used to add style to every element*/
 * {
-  text-align: center;
-  padding: 8px;
-}/*# sourceMappingURL=Task_1.css.map */
+    text-align: center;
+    padding: 8px;
+  }

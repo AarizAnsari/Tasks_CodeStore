@@ -1,0 +1,15 @@
+@mixin props
+    text-align: left
+    margin: 8px
+    padding: 10px
+
+/*Example of Selector Grouping*/
+h1,h2,p
+    @include props
+
+
+#norm_head,#norm_data
+    @include props
+    
+/*It is not only limited to element selector and it also can 
+be applied to ID or Class in the same way.
