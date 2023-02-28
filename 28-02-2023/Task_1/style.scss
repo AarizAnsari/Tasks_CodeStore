@@ -1,0 +1,22 @@
+$clrred:red;
+h2,p{
+    text-align: center;
+  }
+  
+  /*Example Of Pseudo Class*/
+  .heading:first-letter{
+    color: $clrred;
+  }
+  .heading:hover{
+    color: green;
+  }
+  
+  /*Example Of Pseudo Element*/
+  p::first-line{
+    color: bisque;
+  }
+  
+  p::selection {
+    color: $clrred;
+    background: yellow;
+  }

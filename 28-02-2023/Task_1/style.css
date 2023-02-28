@@ -1,22 +1,22 @@
-h2,p{
+h2, p {
   text-align: center;
 }
 
 /*Example Of Pseudo Class*/
-.heading:first-letter{
+.heading:first-letter {
   color: red;
 }
-.heading:hover{
+
+.heading:hover {
   color: green;
 }
 
 /*Example Of Pseudo Element*/
-p::first-line{
+p::first-line {
   color: bisque;
 }
 
 p::selection {
   color: red;
   background: yellow;
-}
-
+}/*# sourceMappingURL=style.css.map */
