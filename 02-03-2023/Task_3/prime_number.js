@@ -1,3 +1,4 @@
+//Funtion to check if a number is prime
 function isprime(n)
 {
 
@@ -21,15 +22,19 @@ function isprime(n)
     return true;  
   }
 }
+
+//Funtion to iterate all numbers from 1 to n 
+//store to output if it is a prime number
 function main(){
     const number = document.getElementById('num').value;
     let i = 1;
     let ans="";
     while(i<=number){
         if(isprime(i)){
-           ans+=i.toString()+" ";
+           ans += i.toString()+" ";
         }
         i++;
     }
+    //Writing output to HTML element
     document.getElementById('output').innerHTML=ans;
 }

@@ -1,3 +1,5 @@
+
+//JS funtions to display outputs in different ways
 function innerhtml(){
     document.getElementById('inhtml').innerHTML=
     "inner.html property can write into an html element using it's ID, Class name or the tag name.";
