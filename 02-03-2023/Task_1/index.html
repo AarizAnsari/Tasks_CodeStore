@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<!------------------Adding external JS file----------------------->
+<script src="index.js"></script>
+<body>
+    <header>
+        <h1>Ways to add JS in HTML document</h1>
+    </header>
+    <div>
+        <h3>1) Inline JS</h3>
+        <!------------------Internal script defined inside a button element----------------------->
+        <button onclick="document.write('This text is displayed using inline JS');">Click for example</button>
+        <h3>2) Internal JS</h3>
+
+        <!------------------Internal function written in <script tag is called>----------------------->
+        <button onclick="internal()">Click for example</button>
+        <h3>3) External JS</h3>
+
+        <!------------------Calling external function from external JS file----------------------->
+        <button onclick="external()">Click for example</button>
+    </div>
+    <script>
+        function internal(){
+            document.write('This text is displayed using internal JS');
+        }
+    </script>
+</body>
+</html>
