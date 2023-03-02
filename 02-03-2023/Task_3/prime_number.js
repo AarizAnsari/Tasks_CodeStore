@@ -6,12 +6,12 @@ function isprime(n)
     return false;
   }
 
-  else if(n === 2)
+  else if(n === 2 || n === 3)
   {
     return true;
   }else
   {
-    for(let i = 2; i < n; i++)
+    for(let i = 3; i < n; i++)
     {
       if(n % i === 0)
       {
