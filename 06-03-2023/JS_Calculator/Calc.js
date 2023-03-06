@@ -15,12 +15,12 @@ function Calculate(btn) {
             throw "Time should be greater than zero";
         }
         else if (btn == 0) {
-            document.getElementById('output').innerHTML =
-                principal * rate * time / 100;
+            document.getElementById('output').innerHTML = "Interest : "+
+                (principal * rate * time / 100).toFixed(2);
         }
         else if (btn == 1) {
             document.getElementById('output').innerHTML =
-                ((principal * Math.pow((1 + (rate / 100)), time)) - principal);
+                ((principal * Math.pow((1 + (rate / 100)), time)) - principal).toFixed(2);
         }
     }
     catch (err) {
