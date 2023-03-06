@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest Calculator</title>
+</head>
+<style>
+    body {
+        background-color: bisque;
+        text-align: center
+    }
+
+    ul {
+        display: inline-block;
+        list-style: none;
+        border: 2px black;
+        border-style: solid;
+        border-radius: 5px;
+        padding-right: 30px;
+    }
+
+    li {
+        padding: 15px;
+    }
+</style>
+
+<body>
+    <script src="Calc.js"></script>
+    <ul>
+        <li>
+            <h2>
+                INTEREST CALCULATOR
+            </h2>
+        </li>
+        <li>
+            <input id="amt" type="number" placeholder="Principal Amount" required>
+        </li>
+        <li>
+            <input id="int" type="number" placeholder="Interest Rate" required>
+        </li>
+        <li>
+            <input id="time" type="number" placeholder="Time in Years" required>
+        </li>
+        <li>
+            <button onclick="Calculate(0)">Calculate SI</button>
+            <button onclick="Calculate(1)">Calculate CI</button>
+        </li>
+        <li>
+            <p id="output"></p>
+        </li>
+    </ul>
+    <p>NOTE: CI is calculated annually</p>
+</body>
+
+</html>

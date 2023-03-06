@@ -175,13 +175,11 @@ const information = {
         Experience:10
     }
 }
-
-//THE OBJECT INFORMATION HAVE TWO OBJECTS INSIDE IT
+//THE OBJECT "INFORMATION" HAVE TWO OBJECTS INSIDE IT
 
 //OBJECT.VALUES AND OBJECT.KEYS METHODS ARE USED TO GET DATA FROM AN OBJECT
 console.log(Object.values(person1));
 console.log(Object.keys(person1));
 
 //JSON.STRINGIFY IS USED TO CONVERT THE WHOLE OBJECT INTO THE STRING
-
 console.log(JSON.stringify(person3));
