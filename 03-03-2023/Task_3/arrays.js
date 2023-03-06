@@ -67,6 +67,7 @@ const squares = numbers.map(
         return value * value;
     }
 );
+
 console.log(squares);
 
 //FILTER FUNCTION ONLY PASSES THE ELEMENTS TO THE NEW ARRAY 
@@ -122,15 +123,15 @@ console.log(from_array);
 
 //A SINGLE JS OBJECT CAN BE CREATED AS FOLLOWS
 const resident = {
-    name:'john',
-    age:26
+    name: 'john',
+    age: 26
 }
 
 //TO CREATE MULTIPLE OBJECTS OF SAME TYPE A CLASS AND CONSTRUCTOR IS USED
 
-class person{
+class person {
     //CREATING THE CONSTRUCTOR USING CONSTRUCTOR KEYWORD
-    constructor(name,age){
+    constructor(name, age) {
 
         //this keyword refers to the variable to be global variable
         this.name = name;
@@ -139,9 +140,9 @@ class person{
 }
 
 //CREATING MULTIPLE OBJECTS USING THE CONSTRUCTOR
-const person1 = new person('Adam',42);
-const person2 = new person('Mike',23);
-const person3 = new person('Any',13);
+const person1 = new person('Adam', 42);
+const person2 = new person('Mike', 23);
+const person3 = new person('Any', 13);
 
 //ACCESSING AN OBJECT PROPERTY VALUE
 console.log(person2.name);
@@ -151,12 +152,12 @@ person2.name = 'Harry';
 console.log(person2.name);
 
 //CREATING ARRAY OF OBJECTS
-const object_array = [person1,person2,person3];
+const object_array = [person1, person2, person3];
 
 //SORTING ARRAY OBJECTS BASED ON AGE
 object_array.sort(
-    function(a,b){
-        return a.age-b.age;
+    function (a, b) {
+        return a.age - b.age;
     }
 );
 
@@ -166,13 +167,13 @@ delete person3.age;
 //NESTED OBJECTS
 
 const information = {
-    personal : {
-        name:'Mike',
-        marital_status:false
+    personal: {
+        name: 'Mike',
+        marital_status: false
     },
-    professional : {
-        Qualification:'Post Graduate',
-        Experience:10
+    professional: {
+        Qualification: 'Post Graduate',
+        Experience: 10
     }
 }
 //THE OBJECT "INFORMATION" HAVE TWO OBJECTS INSIDE IT
