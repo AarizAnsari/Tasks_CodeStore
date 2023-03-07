@@ -5,57 +5,82 @@ var destination = "";
 
 
 //GLOBAL OBJECT TO STORE SELECTED ROUTES
-const routes = {};
-
+const routes = {
+    'delhi' : ['delhi'],
+    'noida' : ['noida'],
+    'lucknow' : ['lucknow'],
+    'roorkee' : ['roorkee'],
+    'mumbai' : ['mumbai'],
+    'jaipur' : ['jaipur']
+};
 
 const cities = ['delhi','noida','lucknow','roorkee','mumbai','jaipur'];
 
 //FUNCTION TO DISABLE DESTINATION CITY WHEN SELECTED IN SOURCE
-function setSource() {
-    let x = document.getElementById('source').value;
+function setSource(trigger) {
 
-    index = cities.indexOf(x);
+    for(let i=1;i<=6;i++){
+        document.getElementById('destination').options[i].disabled = false;
+    }
+
+    if(trigger){let x = document.getElementById('source').value;
+
+    let blocked = routes[x];
+
     
-    let dests = [];
-    if(routes.hasOwnProperty(x)){
-        dests = routes[x];
+
+    for(let i=0;i<blocked.length;i++){
+        document.getElementById('destination').options[(cities.indexOf(blocked[i]))+1].disabled = true;
     }
-    for(let i=0;i<=5;i++){
-        if(i==index || (dests.indexOf(i)>=0)){
-            document.getElementById('destination').options[i+1].disabled = true;
-        }
-        else{
-            document.getElementById('destination').options[i+1].disabled = false;
-        }
-    }
+    
     document.getElementById('from').innerHTML = ("From :"+x).toUpperCase();
-    source = x;
+    source = x;}
 }
 
 //FUNCTION TO DISABLE SOURCE CITY WHEN SELECTED IN DESTINATION
-function setDestination() {
-    let x = document.getElementById('destination').value;
+function setDestination(trigger) {
 
-    let index = cities.indexOf(x);
+    for(let i=1;i<=6;i++){
+        document.getElementById('source').options[i].disabled = false;
+    }
 
-    for(let i=0;i<=5;i++){
-        if(i==index){
-            document.getElementById('source').options[i+1].disabled = true;
-        }
-        else{
-            document.getElementById('source').options[i+1].disabled = false;
-        }
+    if(trigger){let x = document.getElementById('destination').value;
+
+    let blocked = routes[x];
+
+    for(let i=0;i<blocked.length;i++){
+        document.getElementById('source').options[(cities.indexOf(blocked[i]))+1].disabled = true;
     }
     document.getElementById('to').innerHTML = ("To :"+x).toUpperCase();
-    destination = x;
+    destination = x;}
 }
 
 //FUNTION TO SET SELCTED SOURCE AND DESTINATION TO A ROUTE
 function setRoute(){
-   routes[source.value].push(cities.indexOf(destination));
-   console.log(typeof routes[source]);
-   let data = "";
-    for (const key in routes) {
-        data += ("from :" + source + "&nbsp" + "to :" + destination + "<br>");
+    try{
+        if(source==''||destination==''){
+            throw "Please select source and destination";
+        }
+        else{
+            routes[source][routes[source].length] = destination;
+
+    let data = "Selected Routes : <br>";
+
+    data = document.getElementById('routes_list').innerHTML;
+    data += "From :"+source+"&nbsp To:"+destination+"<br>";
+
+  document.getElementById('routes_list').innerHTML = data;
+   source="";
+   destination="";
+   document.getElementById('to').innerHTML = "";
+   document.getElementById('from').innerHTML = "";
+   document.getElementById('source').selectedIndex = "0";
+   document.getElementById('destination').selectedIndex = "0";
+   setSource(false);
+   setDestination(false);
+        }
+    }
+    catch(err){
+        window.alert(err);
     }
 }
