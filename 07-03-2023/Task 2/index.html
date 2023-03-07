@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <title>HTML DOM</title>
+</head>
+<style>
+    button,img{
+        display: block;
+        margin-top: 20px;
+    }
+</style>
+<body>
+    <h1 id="heading">Hello, Welcome to our page.</h1>
+    <button onclick="changeHeading()">Click to change the heading</button>
+
+    <p id="para">We can use Html dom properties to manipulate data inside an element.</p>
+    <button onclick="changeParaStyle()">Click to change paragraph color</button>
+
+    <img id="image" src="https://picsum.photos/seed/picsum/200/300" alt="random picture">
+    <button onclick="changeImage()">Click to change the image</button>
+
+</body>
+</html>

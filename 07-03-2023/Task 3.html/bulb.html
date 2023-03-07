@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="bulb.js"></script>
+    <title>Toggle Bulb</title>
+</head>
+<style>
+    img{
+        display: block;
+        justify-content: center;
+    }
+    body{
+        background-color: white;
+        text-align: center;
+    }
+    #cont{
+        border: 5px solid gray;
+        border-radius: 10px;
+        position: absolute;
+        left: 50%;
+        top: 10%;
+    }
+    button{
+        width: 100%;
+    }
+</style>
+<body>
+    <div id="cont">
+        <img id="bulb" src="https://media.geeksforgeeks.org/wp-content/uploads/OFFbulb.jpg" alt="Bulb image">
+    <button onclick="toggle()" id="toggle_button">OFF</button>
+    </div>
+</body>
+</html>
