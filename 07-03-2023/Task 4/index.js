@@ -6,27 +6,21 @@ const routes = {};
 
 //SOURCE CITY OBJECT
 //VALUE DEFINES A BOOLEAN TO IDENTIFY THE CITY IS  DISABLED OR ENABLED
-const source_cities = {
-    delhi : false,
-    noida : false,
-    lucknow :false,
-    roorkee :false,
-    mumbai : false,
-    jaipur : false
-}
 
-const dest_cities = {
-    delhi : false,
-    noida : false,
-    lucknow :false,
-    roorkee :false,
-    mumbai : false,
-    jaipur : false
-}
+
 
 //FUNCTION TO DISABLE DESTINATION CITY WHEN SELECTED IN SOURCE
 function setSource(dest) {
     
+    const source_cities = {
+        delhi : false,
+        noida : false,
+        lucknow :false,
+        roorkee :false,
+        mumbai : false,
+        jaipur : false
+    }
+
     let keys = Object.keys(source_cities);
     let x = document.getElementById('source').value;
     source_cities[x] = true;
@@ -44,6 +38,15 @@ function setSource(dest) {
 //FUNCTION TO DISABLE SOURCE CITY WHEN SELECTED IN DESTINATION
 function setDestination(src) {
     
+    const dest_cities = {
+        delhi : false,
+        noida : false,
+        lucknow :false,
+        roorkee :false,
+        mumbai : false,
+        jaipur : false
+    }    
+
     let keys = Object.keys(dest_cities);
     let x = document.getElementById('destination').value;
     dest_cities[x] = true;
@@ -67,14 +70,14 @@ function setRoute(){
         if(destination==''||source==''){
             throw "Please select destination and source"
         } 
-        setSource(destination);
-        setDestination(source);
         routes[source] = destination;
         destination ="";
         source = "";
         let data  = "Created Routes <br>";
         for (const key in routes) {
             data += ("from :"+key+"&nbsp"+"to :"+routes[key]+"<br>"); 
+            setDestination(routes[key]);
+            setSource(key);
         }
         document.getElementById('routes_list').innerHTML = data;
         document.getElementById('to').innerHTML = null;
