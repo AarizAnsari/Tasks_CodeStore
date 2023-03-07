@@ -9,7 +9,7 @@
     <title>Travel</title>
 </head>
 <style>
-    #bg{
+    #bg {
         background-image: url("https://prod-virtuoso.dotcmscloud.com/dA/188da7ea-f44f-4b9c-92f9-6a65064021c1/previewImage/PowerfulReasons_hero.jpg");
         background-position: center;
         background-repeat: no-repeat;
@@ -19,35 +19,41 @@
         margin: 0;
         padding: 0;
     }
-    body{
+
+    body {
         height: 100%;
         background-size: cover;
         margin: 0;
         padding: 0;
     }
-    .city{
+
+    .city {
         height: 50px;
         border: 2px solid white;
         border-radius: 10px;
         margin: 20px;
     }
-    option,label{
+
+    option,
+    label {
         font-size: large;
-        background-color: bisque    ;
+        background-color: bisque;
     }
-    button{
+
+    button {
         background-color: azure;
-        border: 3px solid azure ;
+        border: 3px solid azure;
         border-radius: 10px;
     }
-    
-    #route_cont{
+
+    #route_cont {
         color: azure;
         display: inline;
         font-size: large;
         width: 400px;
     }
-    #routes_list{
+
+    #routes_list {
         width: 500px;
         background-color: black;
     }
@@ -59,37 +65,37 @@
         <!----------------SOURCE SELECTION LIST------------------>
         <label for="source">Source:</label>
 
-    <select onchange="setSource('none')" name="city" class="city" id="source">
-        <option selected disabled>Source</option>
-        <option id="source_delhi" value="delhi">Delhi</option>
-        <option id="source_noida" value="noida">Noida</option>
-        <option id="source_lucknow" value="lucknow">Lucknow</option>
-        <option id="source_roorkee" value="roorkee">Roorkee</option>
-        <option id="source_mumbai" value="mumbai">Mumbai</option>
-        <option id="source_jaipur" value="jaipur">Jaipur</option>
-    </select>
+        <select onchange="setSource('none')" name="city" class="city" id="source">
+            <option selected disabled>Source</option>
+            <option id="source_delhi" value="delhi">Delhi</option>
+            <option id="source_noida" value="noida">Noida</option>
+            <option id="source_lucknow" value="lucknow">Lucknow</option>
+            <option id="source_roorkee" value="roorkee">Roorkee</option>
+            <option id="source_mumbai" value="mumbai">Mumbai</option>
+            <option id="source_jaipur" value="jaipur">Jaipur</option>
+        </select>
 
 
-    <label for="destination">Destination:</label>
+        <label for="destination">Destination:</label>
 
         <!----------------DESTINATION SELECTION LIST------------------>
-    <select onchange="setDestination('none')" class="city" id="destination">
-        <option selected disabled>Destination</option>
-        <option id="dest_delhi" value="delhi">Delhi</option>
-        <option id="dest_noida" value="noida">Noida</option>
-        <option id="dest_lucknow" value="lucknow">Lucknow</option>
-        <option id="dest_roorkee" value="roorkee">Roorkee</option>
-        <option id="dest_mumbai" value="mumbai">Mumbai</option>
-        <option id="dest_jaipur" value="jaipur">Jaipur</option>
-    </select>
+        <select onchange="setDestination('none')" class="city" id="destination">
+            <option selected disabled>Destination</option>
+            <option id="dest_delhi" value="delhi">Delhi</option>
+            <option id="dest_noida" value="noida">Noida</option>
+            <option id="dest_lucknow" value="lucknow">Lucknow</option>
+            <option id="dest_roorkee" value="roorkee">Roorkee</option>
+            <option id="dest_mumbai" value="mumbai">Mumbai</option>
+            <option id="dest_jaipur" value="jaipur">Jaipur</option>
+        </select>
 
         <!----------------ROUTE DISPLAY ELEMENTS------------------>
-    <p id="from"></p>
-    <p id="to"></p>
-    <button onclick="setRoute()" id="journey_button">Set Journey</button>
-    <div id="route_cont">
-        <p id="routes_list"></p>
-    </div>
+        <p id="from"></p>
+        <p id="to"></p>
+        <button onclick="setRoute()" id="journey_button">Set Journey</button>
+        <div id="route_cont">
+            <p id="routes_list"></p>
+        </div>
     </div>
 </body>
 
