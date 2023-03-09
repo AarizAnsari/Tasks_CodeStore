@@ -7,53 +7,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Promises</title>
 </head>
+
 <style>
-    body{
+    body {
         background-color: black;
         color: white;
     }
 </style>
+
 <body>
+
     <center>
         <h1>Fetching Api Data Using JS Promises</h1>
-    <p id="timer">You will see the Current bitcoin price in 3</p>
-    <h2 id="output"></h2>
-    <img src="https://images.theconversation.com/files/506823/original/file-20230127-16-4cgk1e.jpeg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip" alt="">
+        <p id="timer">You will see the Current bitcoin price in 3</p>
+        <h2 id="output"></h2>
+        <img src="https://images.theconversation.com/files/506823/original/file-20230127-16-4cgk1e.jpeg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip"
+            alt="">
     </center>
+    
     <script>
 
-        let promisetimer2 = new Promise(function (resolve,reject){
-            setTimeout(function(){
-               resolve('2');
-            },1000);
+        let promisetimer2 = new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                resolve('2');
+            }, 1000);
         });
 
-        let promisetimer1 = new Promise(function (resolve,reject){
-            setTimeout(function(){
-               resolve('1');
-            },2000);
+        let promisetimer1 = new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                resolve('1');
+            }, 2000);
         });
 
-        let promisetimer = new Promise(function (resolve,reject){
-            setTimeout(function(){
-               resolve('');
-            },3000);
+        let promisetimer = new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                resolve('');
+            }, 3000);
         });
 
-        promisetimer2.then(function(value){
+        promisetimer2.then(function (value) {
             document.getElementById('timer').innerHTML = 'You will see the Current bitcoin price in 2';
         });
 
-        promisetimer1.then(function(value){
+        promisetimer1.then(function (value) {
             document.getElementById('timer').innerHTML = 'You will see the Current bitcoin price in 1';
         });
 
-        promisetimer.then(function(value){
+        promisetimer.then(function (value) {
             document.getElementById('timer').innerHTML = '';
             promiseapi.then(
-            function (value) { display(value); },
-            function (error) { alert('Something went wrong')}
-        );
+                function (value) { display(value); },
+                function (error) { alert('Something went wrong') }
+            );
         });
         let promiseapi = new Promise(function (resolve, reject) {
             let req = new XMLHttpRequest();
@@ -61,19 +66,19 @@
             req.onload = function () {
 
                 if (req.status == 200) {
-                   let data = req.response;
-                   resolve(data);
-                } 
+                    let data = req.response;
+                    resolve(data);
+                }
                 else {
                     reject("An error occured");
                 }
             };
             req.send();
         });
-        
+
 
         function display(price) {
-            document.getElementById("output").innerHTML ="Current Bitcoin price is: &nbsp  $"+price.slice(372,383);
+            document.getElementById("output").innerHTML = "Current Bitcoin price is: &nbsp  $" + price.slice(372, 383);
         }
     </script>
 </body>
