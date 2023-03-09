@@ -63,10 +63,8 @@ function setRoute() {
         if (source == '' || destination == '') {
             throw "Please select source and destination";
         }
-        let current_routes = [];
-        current_routes = routes[source];
-
-        if(current_routes.indexOf(destination)>0){
+        
+        if(routes[source].indexOf(destination)>0){
             throw "Route is already selected";
         }
 
