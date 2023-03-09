@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="student.js"></script>
+    <title>Student</title>
+</head>
+<style>
+    body{
+        color: rgb(46,141,69);
+    }
+    .form_field {
+        margin: 10px;
+        font-size: large;
+        float: right;
+    }
+
+    input,
+    select {
+        font-size: large;
+        border-color: rgb(46,141,69);
+        color: rgb(46,141,69);
+        border-style: solid;
+        border-radius: 5px;
+
+    }
+    select{
+        width: 230px;
+        border: 2px solid rgb(46,141,69);;
+    }
+    #container{
+        margin: auto;
+        width: 450px;
+        text-align: center;
+        border: 4px solid rgb(46,141,69);
+        border-radius: 10px;
+    }
+
+    label {
+        width: 250px;
+        text-align: right;
+    }
+   
+    button{
+        background-color: rgb(46,141,69);
+        border: 2px solid rgb(46,141,69);
+        border-radius: 5px;
+        color: white;
+        height: 30px;
+        width: 100px;
+        font-size: large;
+        margin: 20px;
+    }
+</style>
+
+<body>
+    <div id="container">
+        <h1>Student Details</h1>
+    <form>
+        <div class="form_field">
+            <label for="Sname">Student's Name:</label>
+            <input type="text" placeholder="Student Name" id="Sname">
+        </div>
+        <div class="form_field">
+            <label for="scl">School Name:</label>
+            <input type="text" placeholder="School Name" id="scl">
+        </div>
+        <div class="form_field">
+            <label for="stream">Stream:</label>
+            <select id="stream">
+                <option selected disabled>Stream</option>
+                <optgroup label="Science">
+                    <option>PCM</option>
+                    <option>PCB</option>
+                </optgroup>
+                <optgroup label="Others">
+                    <option>Commerce</option>
+                <option>Arts</option>
+                </optgroup>
+            </select>
+        </div>
+        <div class="form_field">
+            <label for="board">Board:</label>
+            <input type="text" placeholder="Board" id="board">
+        </div>
+        <div class="form_field">
+            <label for="10percentage">10th Percentage:</label>
+            <input type="number" placeholder="10th Percentage" id="10percentage">
+        </div>
+        <div class="form_field">
+            <label for="12percentage">12th Percentage:</label>
+            <input type="number" placeholder="12th Percentage" id="12percentage">
+        </div>
+    </form>
+    <div class="buttons">
+        <button onclick="submit()">Submit</button>
+        <button>Reset</button>
+    </div>
+    </div>
+</body>
+
+</html>

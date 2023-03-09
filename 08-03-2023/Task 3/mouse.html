@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Events</title>
+</head>
+<style>
+    button{
+        height: 300px;
+    }
+    *{
+        font-size: x-large;
+    }
+</style>
+<body>
+    <button 
+    onclick="mouseActions(0)"
+    ondblclick="mouseActions(1)"
+    oncontextmenu="mouseActions(2)"
+    onmousedown="mouseActions(3)"
+    onmouseup="mouseActions(4)"
+    onmousemove="mouseActions(5)"
+    onmouseout="mouseActions(6)"
+    onmouseenter="mouseActions(7)"
+    onmouseleave="mouseActions(8)"
+    onmousewheel="mouseActions(9)"
+    >
+        Use this button for different mouse events
+    </button>
+    <p id="output"></p>
+    <script>
+        function mouseActions(act){
+            let message = '';
+            if(act == 0){
+                message = 'You just clicked on the button'
+            }
+            if(act == 1){
+                message = 'You just double clicked on the button'
+            }
+            if(act == 2){
+                message = 'You just right clicked on the button'
+            }
+            if(act == 3){
+                message = 'You are currently pressing the button'
+            }
+            if(act == 4){
+                message = 'You just released the button'
+            }
+            if(act == 5){
+                message = 'You are hovering on the button'
+            }
+            if(act == 6){
+                message = 'You are hovering outside the button'
+            }
+            if(act == 7){
+                message = 'You are on the button'
+            }
+            if(act == 8){
+                message = 'You are outside the button'
+            }
+            if(act == 9){
+                message = 'You are scrolling mouse wheel'
+            }
+            document.getElementById('output').innerHTML = message;
+        }
+    </script>
+</body>
+</html>
