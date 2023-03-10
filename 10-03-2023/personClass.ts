@@ -22,6 +22,7 @@ console.log(
     "\nage: " +
     person1.age
 );
+
 console.log(
   "Person 2\nFirst name:" +
     person2.firstName +
@@ -30,6 +31,7 @@ console.log(
     "\nage: " +
     person2.age
 );
+
 console.log(
   "Person 3\nFirst name:" +
     person3.firstName +
