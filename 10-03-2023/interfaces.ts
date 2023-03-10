@@ -19,7 +19,7 @@ interface User {
   const user1: User = {
     email: "user@123.com",
     UID: 224576,
-    subscribed: subscriptions.annually, //DERIVING VALUR FROM ENUM
+    subscribed: subscriptions.annually, //DERIVING VALUE FROM ENUM
     getname: function () {
       return "Mike";
     }
@@ -38,7 +38,7 @@ interface User {
   console.log("User ID : " + user1.UID);
   console.log("Subscription Charge : " + user1.subscribed);
   console.log("Email ID : " + user1.email);
-
+  console.log();
   console.log("User Name : " + user2.getname());
   console.log("User ID : " + user2.UID);
   console.log("Subscription Charge : " + user2.subscribed);
