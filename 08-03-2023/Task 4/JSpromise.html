@@ -66,8 +66,8 @@
             req.onload = function () {
 
                 if (req.status == 200) {
-                    let data = req.response;
-                    resolve(data);
+                    let data = JSON.parse(req.response);
+                    resolve(data['bpi']['USD']['rate']);
                 }
                 else {
                     reject("An error occured");
@@ -78,7 +78,8 @@
 
 
         function display(price) {
-            document.getElementById("output").innerHTML = "Current Bitcoin price is: &nbsp  $" + price.slice(372, 383);
+            console.log(price);
+            document.getElementById("output").innerHTML = "Current Bitcoin price is: &nbsp  $" +price;
         }
     </script>
 </body>
