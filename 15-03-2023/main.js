@@ -74,8 +74,8 @@ function display(date1, i, From, To) {
     document.getElementById('res').style.visibility = 'visible';
     const node = document.createTextNode("On "+date1+" Table " + i + " is Booked from " + toHoursAndMinutes(From) + " to " + toHoursAndMinutes(To));
     const del = document.createElement("button");
-    const nde = document.createTextNode("🗑");
-    del.appendChild(nde);
+    const ndel = document.createTextNode("🗑");
+    del.appendChild(ndel);
     const cont = document.createElement("div");
     cont.setAttribute("id", (date1 + i + From + To));
     let brac = '"';
