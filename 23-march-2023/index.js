@@ -3,18 +3,30 @@ const app = express()
 const port = 3001
 const mongoose = require('mongoose');
 const Reservation = require('./model/reservationModel')
+const cors = require('cors');
+const { json } = require('express');
+
+app.use(json());
+
+app.use(cors({
+    origin : "*"
+}));
+
+app.get('/',(req,res) => {
+    res.send('hello');
+})
 
 //TO GET ALL RESERVATIONS OF A TABLE ON A PERTICULAR DATE 
 app.get('/reservations:table/:date', async (req, res) => {
     const table = req.params['table'];
     const date = req.params['date'];
-    const reservation = await Reservation.find({ "table": table, "date": date });
+    const reservation = await Reservation.find({"table":table,"date":date});
     res.send(reservation);
 });
 
 //TO GET ALL RESERVATIONS SAVED IN DB
 app.get('/reservations', async (req, res) => {
-    const reservation = await Reservation.find({});
+    const reservation = await Reservation.find();
     res.send(reservation);
 });
 
