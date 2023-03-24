@@ -35,3 +35,5 @@ async function deleteData(rollno) {
    await data.deleteOne({ _id: rollno});
    client.close();
 }
+
+module.exports = writeData;

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+//RESERVATION SCHEMA
 const reservationSchema = mongoose.Schema(
     {
         from: Number,

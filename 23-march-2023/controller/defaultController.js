@@ -1,4 +1,5 @@
 
+//FUNCTION TO SET DEFAULT DATE AND TIME OF FRONTEND
 function setDefault(){
     
 const currentDateTime = new Date();
